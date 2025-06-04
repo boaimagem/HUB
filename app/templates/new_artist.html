@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>Novo Artista</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Adicionar Artista</h1>
+    <form method="post">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" required>
+        <label for="info">Informações de direitos autorais:</label>
+        <textarea name="info" id="info" required></textarea>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>

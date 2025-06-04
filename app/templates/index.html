@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>Artistas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Artistas</h1>
+    <a href="{{ url_for('new_artist') }}">Adicionar novo artista</a>
+    <ul>
+        {% for artist in artists %}
+        <li><a href="{{ url_for('artist_detail', artist_id=artist[0]) }}">{{ artist[1] }}</a></li>
+        {% else %}
+        <li>Nenhum artista cadastrado.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

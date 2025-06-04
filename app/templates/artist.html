@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>{{ artist[1] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ artist[1] }}</h1>
+    <p>{{ artist[2] }}</p>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
